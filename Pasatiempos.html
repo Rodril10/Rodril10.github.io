@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Diario Digital - Sección Principal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .featured {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        .featured article {
+            background: #fff;
+            margin: 15px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            flex: 1 1 calc(66.666% - 30px);
+            box-sizing: border-box;
+        }
+        .featured img {
+            max-width: 100%;
+            height: auto;
+        }
+        .featured h2 {
+            font-size: 1.8em;
+            margin: 10px 0;
+        }
+        .featured p {
+            font-size: 1em;
+            line-height: 1.5;
+            color: #333;
+        }
+        .secondary {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .secondary article {
+            background: #fff;
+            margin: 15px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            flex: 1 1 calc(33.333% - 30px);
+            box-sizing: border-box;
+        }
+        .secondary img {
+            max-width: 100%;
+            height: auto;
+        }
+        .secondary h3 {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+        .secondary p {
+            font-size: 0.9em;
+            color: #333;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        table {
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .highlight {
+            background-color: yellow;
+        }
+        .correct {
+            background-color: green;
+            color: white;
+        }
+        .incorrect {
+            background-color: red;
+            color: white;
+        }
+        #word {
+            font-size: 24px;
+            letter-spacing: 2px;
+        }
+        .letter {
+            display: inline-block;
+            width: 20px;
+            border-bottom: 2px solid black;
+            margin: 0 5px;
+        }
+        #wrong-letters {
+            margin-top: 20px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>El Diario Luchito</h1>
+        <p>El diario numero 1 en la economia</p>
+    </header>
+    <nav>
+
+        <a href="Index.html">Seccion Principal</a>
+        <a href="Opiniones.html">Articulo de Opiniones</a>
+        <a href="Pasatiempos.html">Pasatiempos</a>
+        <a href="Editorial.html">Editorial</a>
+        
+    </nav>
+    <main>
+        <section class="secondary">
+
+            <article>
+                <br>
+                <br>
+                <img src=".\IMG\Trivia.png" alt="Sopa de letras" style="width: 100%; height: 20%">
+                <p>
+                    Encuentra las siguientes palabras en la sopa de letras. Selecciona la letra y marca la palabra una vez la marques oprime la opcion de de verificar palabra
+                </p>
+                <ul>
+                    <li>ECONOMIA</li>
+                    <li>CRECIMIENTO</li>
+                    <li>AMBIENTAL</li>
+                    <li>CIRCULAR</li>
+                    <li>MERCADO</li>
+                    <li>MONOPOLIO</li>
+                    <li>LIBRE</li>
+                </ul>
+                <img src=".\IMG\Think.png" alt="Sopa de letras" style="width: 100%; height: 40%">
+            </article>
+            <article>
+                <table id="wordSearch">
+                    <tr><td>E</td><td>C</td><td>O</td><td>N</td><td>O</td><td>M</td><td>I</td><td>A</td><td>X</td><td>P</td><td>Q</td><td>R</td><td>S</td><td>T</td><td>U</td></tr>
+                    <tr><td>X</td><td>R</td><td>H</td><td>J</td><td>K</td><td>L</td><td>M</td><td>X</td><td>C</td><td>R</td><td>E</td><td>C</td><td>I</td><td>M</td><td>I</td></tr>
+                    <tr><td>A</td><td>B</td><td>A</td><td>M</td><td>B</td><td>I</td><td>E</td><td>N</td><td>T</td><td>A</td><td>L</td><td>X</td><td>N</td><td>O</td><td>P</td></tr>
+                    <tr><td>Q</td><td>R</td><td>C</td><td>D</td><td>E</td><td>F</td><td>G</td><td>H</td><td>I</td><td>J</td><td>K</td><td>L</td><td>M</td><td>N</td><td>O</td></tr>
+                    <tr><td>P</td><td>Q</td><td>R</td><td>S</td><td>T</td><td>U</td><td>C</td><td>I</td><td>R</td><td>C</td><td>U</td><td>L</td><td>A</td><td>R</td><td>P</td></tr>
+                    <tr><td>Q</td><td>W</td><td>E</td><td>R</td><td>T</td><td>Y</td><td>U</td><td>I</td><td>O</td><td>P</td><td>A</td><td>S</td><td>D</td><td>F</td><td>G</td></tr>
+                    <tr><td>L</td><td>A</td><td>M</td><td>M</td><td>E</td><td>R</td><td>C</td><td>A</td><td>D</td><td>O</td><td>P</td><td>W</td><td>E</td><td>R</td><td>T</td></tr>
+                    <tr><td>Y</td><td>U</td><td>I</td><td>O</td><td>P</td><td>A</td><td>S</td><td>D</td><td>F</td><td>G</td><td>H</td><td>J</td><td>K</td><td>L</td><td>M</td></tr>
+                    <tr><td>C</td><td>M</td><td>O</td><td>N</td><td>O</td><td>P</td><td>O</td><td>L</td><td>I</td><td>O</td><td>K</td><td>Z</td><td>X</td><td>C</td><td>V</td></tr>
+                    <tr><td>Q</td><td>W</td><td>E</td><td>R</td><td>T</td><td>Y</td><td>U</td><td>I</td><td>O</td><td>P</td><td>A</td><td>S</td><td>D</td><td>F</td><td>G</td></tr>
+                    <tr><td>K</td><td>L</td><td>X</td><td>L</td><td>I</td><td>B</td><td>R</td><td>E</td><td>A</td><td>B</td><td>C</td><td>D</td><td>E</td><td>F</td><td>G</td></tr>
+                    <tr><td>A</td><td>S</td><td>D</td><td>F</td><td>G</td><td>H</td><td>J</td><td>K</td><td>L</td><td>Z</td><td>X</td><td>C</td><td>V</td><td>B</td><td>N</td></tr>
+                    <tr><td>Q</td><td>W</td><td>E</td><td>R</td><td>T</td><td>Y</td><td>U</td><td>I</td><td>O</td><td>P</td><td>A</td><td>S</td><td>D</td><td>F</td><td>G</td></tr>
+                    <tr><td>K</td><td>L</td><td>Z</td><td>X</td><td>C</td><td>V</td><td>B</td><td>N</td><td>M</td><td>Q</td><td>W</td><td>E</td><td>R</td><td>T</td><td>Y</td></tr>
+                    <tr><td>U</td><td>I</td><td>O</td><td>P</td><td>A</td><td>S</td><td>D</td><td>F</td><td>G</td><td>H</td><td>J</td><td>K</td><td>L</td><td>Z</td><td>X</td></tr>
+            </table>
+                <button onclick="checkWord()">Verificar Palabra</button>
+                <button onclick="clearSelection()">Limpiar Selección</button>
+            </article>
+        </section>
+        <section class="secondary">
+            <article>
+                <img src=".\IMG\Ahorcado.png" alt="Sopa de letras" style="width: 100%; height: auto">
+                <p>
+                    Adivina que palabra es de lo contrario perderas. Recuerda que tienes 5 oportunidad para equivocarte solo digita una letras.
+                </p>
+            </article> 
+            <article>
+                <body>
+                    <h2>Juego de Ahorcado</h2>
+                    <p>Resuelve el juego de ahorado encuentra la palabra</p>
+                    <div id="word"></div>
+                    <div id="wrong-letters"></div>
+                    <div id="message"></div>
+
+                    <script>
+                        const words1 = ['economia', 'ahorro', 'circular', 'economiaambiental'];
+                        const word = words1[Math.floor(Math.random() * words1.length)];
+                        const correctLetters = [];
+                        const wrongLetters = [];
+                
+                        function displayWord() {
+                            const display = word.split('').map(letter => (correctLetters.includes(letter) ? letter : '_')).join('');
+                            document.getElementById('word').innerHTML = display;
+                            if (display === word) {
+                                document.getElementById('message').innerHTML = '¡Felicidades! Has ganado.';
+                            }
+                        }
+                
+                        function updateWrongLetters() {
+                            document.getElementById('wrong-letters').innerHTML = 'Letras incorrectas: ' + wrongLetters.join(', ');
+                            if (wrongLetters.length >= 6) {
+                                document.getElementById('message').innerHTML = 'Lo siento, has perdido. La palabra era ' + word;
+                            }
+                        }
+                
+                        window.addEventListener('keydown', (e) => {
+                            const letter = e.key.toLowerCase();
+                            if (letter.match(/^[a-z]$/)) {
+                                if (word.includes(letter)) {
+                                    if (!correctLetters.includes(letter)) {
+                                        correctLetters.push(letter);
+                                        displayWord();
+                                    }
+                                } else {
+                                    if (!wrongLetters.includes(letter)) {
+                                        wrongLetters.push(letter);
+                                        updateWrongLetters();
+                                    }
+                                }
+                            }
+                        });
+                
+                        displayWord();
+                    </script>
+                </body>
+                
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 El Diario Luchito. Todos los derechos reservados. Este diario es de caracter eductivo presentacion 
+            ACA - Entrega Final - Análisis Económico en la Sociedad Actual Corporacion Unificada Nacional </p>
+    </footer>
+</body>
+</html>
+<script>
+    let selectedCells = [];
+
+    document.querySelectorAll('td').forEach(cell => {
+        cell.addEventListener('click', () => {
+            if (cell.classList.contains('highlight')) {
+                cell.classList.remove('highlight');
+                selectedCells.splice(selectedCells.indexOf(cell), 1);
+            } else {
+                cell.classList.add('highlight');
+                selectedCells.push(cell);
+            }
+        });
+    });
+
+    const words = [
+        'ECONOMIA', 'CRECIMIENTO', 'AMBIENTAL', 'CIRCULAR',
+        'MERCADO', 'MONOPOLIO', 'LIBRE'
+    ];
+
+    function checkWord() {
+        let selectedWord = selectedCells.map(cell => cell.textContent).join('');
+        let isCorrect = words.includes(selectedWord);
+        selectedCells.forEach(cell => {
+            if (isCorrect) {
+                cell.classList.add('correct');
+            } else {
+                cell.classList.add('incorrect');
+            }
+            cell.classList.remove('highlight');
+        });
+        selectedCells = [];
+    }
+
+    function clearSelection() {
+        selectedCells.forEach(cell => {
+            cell.classList.remove('highlight', 'correct', 'incorrect');
+        });
+        selectedCells = [];
+    }
+</script>s
